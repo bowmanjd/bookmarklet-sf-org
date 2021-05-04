@@ -1,0 +1,26 @@
+{
+  "name": "bookmarklet-sf-org",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bowmanjd/bookmarklet-sf-org.git"
+  },
+  "description": "A bookmarklet for convenient display of a Salesforce org's information",
+  "browser": "src/bookmarklet.js",
+  "dependencies": {
+    "@minify-html/js": "^0.4.10",
+    "cheerio": "^1.0.0-rc.6",
+    "esbuild": "^0.11.15"
+  },
+  "devDependencies": {
+    "eslint": "^7.24.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "terser -cm -- src/bookmarklet.js"
+  },
+  "author": "Jonathan Bowman",
+  "license": "Apache-2.0"
+}
