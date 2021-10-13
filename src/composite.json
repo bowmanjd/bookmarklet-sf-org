@@ -1,0 +1,24 @@
+{
+  "compositeRequest": [
+    {
+      "method": "GET",
+      "url": "/services/data/v51.0/sobjects/Organization/00D6g000000swAq?fields=Id,Name,TimeZoneSidKey,FiscalYearStartMonth,TrialExpirationDate,OrganizationType,InstanceName,IsSandbox",
+      "referenceId": "orgInfo"
+    },
+    {
+      "method": "GET",
+      "referenceId": "user",
+      "url": "/services/data/v51.0/sobjects/User"
+    },
+    {
+      "method": "GET",
+      "referenceId": "userInfo",
+      "url": "/services/data/v51.0/sobjects/User/@{user.recentItems[0].Id}?fields=Id,Name,Username,Email,TimeZoneSidKey"
+    },
+    {
+      "method": "GET",
+      "referenceId": "sfLicense",
+      "url": "/services/data/v51.0/query?q=SELECT%20TotalLicenses%2C%20UsedLicenses%2C%20Name%20FROM%20UserLicense%20WHERE%20LicenseDefinitionKey%20%3D%20'SFDC'"
+    }
+  ]
+}

@@ -30,6 +30,7 @@ const htmlPlugin = {
         const jsMin = buildSync({
           entryPoints: [path.join(dir, el.attribs.src)],
           bundle: true,
+          globalName: 'BMKLT',
           write: false,
         });
         dom(el).removeAttr('src');
